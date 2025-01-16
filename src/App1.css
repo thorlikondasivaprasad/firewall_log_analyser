@@ -1,0 +1,163 @@
+/* Global styles */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f7fa;
+    height: 100vh;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw; /* Ensure full viewport width */
+  }
+  
+  /* Dashboard container with padding, flex layout, and background */
+  .dashboard {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 20px;
+    overflow-y: auto;
+    gap: 20px;
+    background-color: #f4f6f9;
+    border-radius: 8px;
+    width: 100%; /* Ensure full width */
+    max-width: 100%; /* Allow dashboard to span full width */
+    box-sizing: border-box;
+  }
+  
+  /* Header styling */
+  h1 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Ensure header spans full width */
+  }
+  
+  /* File input button styling */
+  input[type="file"] {
+    display: block;
+    margin: 0 auto 20px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+  }
+  
+  input[type="file"]:hover {
+    background-color: #e7f0ff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Overview box styling */
+  .overview {
+    background-color: #f4f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    border-left: 4px solid #007bff;
+    width: 100%; /* Full width for overview */
+  }
+  
+  /* Overview heading */
+  .overview h2 {
+    font-size: 1.6rem;
+    color: #34495e;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+  }
+  
+  /* Chart container */
+  .chart-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    gap: 20px;
+    width: 100%; /* Ensure chart container spans full width */
+  }
+  
+  /* Chart box styling */
+  .chart {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #ffffff;
+    width: 100%; /* Make sure chart box takes full width */
+  }
+  
+  /* Chart hover effect */
+  .chart:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .chart h3 {
+    font-size: 1.4rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+  }
+  
+  .chart canvas {
+    max-height: 25vh;
+    width: 100%; /* Ensure canvas element expands fully */
+  }
+  
+  /* Media queries for responsiveness */
+  @media (max-width: 1200px) {
+    .chart-container {
+      grid-template-columns: repeat(2, minmax(300px, 1fr));
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .chart-container {
+      grid-template-columns: repeat(1, minmax(300px, 1fr));
+    }
+  
+    h1 {
+      font-size: 1.8rem;
+    }
+  
+    .overview h2 {
+      font-size: 1.4rem;
+    }
+  
+    .line-charts .chart {
+      flex: 1;
+      margin: 10px;
+    }
+  }
+  
+  /* Styling for line charts container */
+  .line-charts {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+    gap: 20px;
+  }
+  
+  .line-charts .chart {
+    flex: 1;
+    margin: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: #ffffff;
+    padding: 20px;
+  }
+  
+  /* Port item styling */
+  .port-item {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #34495e;
+  }
+  

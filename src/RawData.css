@@ -1,0 +1,156 @@
+/* General Reset */
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    /* max-width: 1200px; Ensure the body and html cover the full height */
+    overflow: hidden; /* Prevent overall page scroll when using specific scrollable areas */
+  }
+  
+  /* Full-Screen Wrapper with Scroll */
+  .full-screen {
+    height: 100vh; /* Viewport height */
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f5f5; /* Light background color */
+    overflow: auto; /* Enable scrolling for the page */
+    padding: 20px;
+  }
+  
+  /* Center Container */
+  .container {
+    /* width: 90%; Use most of the screen width */
+    max-width: 1400px; /* Limit maximum width for large screens */
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+    overflow: auto; /* Prevent the container itself from scrolling */
+  }
+  
+  /* Table Container with Scrolling */
+  .table-container {
+    max-height: 60vh; /* Limit the table height */
+    overflow-y: auto; /* Enable vertical scrolling */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    margin-top: 20px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #ffffff;
+  }
+  
+  /* Data Table */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .data-table th, .data-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  .data-table th {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    position: sticky;
+    top: 0; /* Sticky header */
+    z-index: 2; /* Ensure header stays above table rows */
+  }
+  
+  .data-table th span {
+    margin-left: 8px;
+    font-size: 12px;
+    color: #fff;
+  }
+  
+  .data-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .data-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .data-table input {
+    width: 95%;
+    padding: 6px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Back Button */
+  .back-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  
+  .back-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* File Upload */
+  .file-upload {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .file-input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  /* Responsiveness */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 20px;
+    }
+  
+    .container {
+      padding: 10px;
+    }
+  
+    .file-input {
+      width: 100%;
+    }
+  
+    .table-container {
+      max-height: 50vh; /* Adjust for smaller screens */
+    }
+  }
+  
+  .filter-button {
+    margin: 10px 0;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .filter-button:hover {
+    background-color: #0056b3;
+  }
+  
